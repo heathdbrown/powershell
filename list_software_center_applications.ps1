@@ -9,3 +9,6 @@ foreach ($app in $apps) {
         Write-Host $app.Fullname
     }
 }
+
+# I got this from a 
+Invoke-CimMethod -Namespace "root\ccm\clientSDK" -ClassName CCM_Application -ComputerName $Computername -MethodName $Method -Arguments $Params
